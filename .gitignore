@@ -1,0 +1,15 @@
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-error.log
+yarn-error1.log
+yarn-error2.log
+yarn-error3.log
+yarn-error4.log
+yarn-error5.log
+yarn-error6.log
+yarn-error7.log
+yarn-debug.log*
+.yarn-integrity
+ARS.md

@@ -1,0 +1,1387 @@
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserBlogs (20200402055822)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "user_blogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200402055822"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBlogPostsTable (20200402060445)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_blog_id" integer, "title" varchar, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_blog_posts_on_user_blog_id" ON "blog_posts" ("user_blog_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200402060445"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-20 06:29:34.093568"], ["updated_at", "2020-04-20 06:29:34.093568"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (307.5ms)[0m  [1m[35mCREATE DATABASE "fantastic_dev_db" ENCODING = 'unicode'[0m
+  [1m[35m (227.3ms)[0m  [1m[35mCREATE DATABASE "fantastic_test_db" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserBlogs (20200402055822)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "user_blogs" ("id" bigserial primary key, "title" character varying, "author" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402055822"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBlogPostsTable (20200402060445)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "user_blog_id" bigint, "title" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_user_blog_id" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402060445"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-20 06:51:26.386007"], ["updated_at", "2020-04-20 06:51:26.386007"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (112.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_dev_db"[0m
+  [1m[35m (108.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_test_db"[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (224.0ms)[0m  [1m[35mCREATE DATABASE "fantastic_dev_db" ENCODING = 'unicode'[0m
+  [1m[35m (222.8ms)[0m  [1m[35mCREATE DATABASE "fantastic_test_db" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (111.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_dev_db"[0m
+  [1m[35m (110.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_test_db"[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (224.5ms)[0m  [1m[35mCREATE DATABASE "fantastic_dev_db" ENCODING = 'unicode'[0m
+  [1m[35m (223.0ms)[0m  [1m[35mCREATE DATABASE "fantastic_test_db" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserBlogs (20200402055822)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "user_blogs" (
+  "id" bigserial primary key, 
+  "title" character varying, 
+  "author" character varying, 
+  "created_at" timestamp(6) NOT NULL, 
+  "updated_at" timestamp(6) NOT NULL
+)
+[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402055822"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBlogPostsTable (20200402060445)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "user_blog_id" bigint, "title" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_user_blog_id" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402060445"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-20 06:55:23.924155"], ["updated_at", "2020-04-20 06:55:23.924155"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/mixail/.asdf/installs/ruby/2.6.2/bin/rake:23)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (99990402060445)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blog_posts_on_id" ON "blog_posts"  ("id")[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (99990402060445)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "blog_post_id_index" ON "blog_posts"  ("id")[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (99990402060445)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "blog_post_id_index" ON "blog_posts"  ("id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "blog_posts_user_blog_id_index" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_title" ON "blog_posts"  ("title")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_content" ON "blog_posts"  ("content")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_created_at" ON "blog_posts"  ("created_at")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_updated_at" ON "blog_posts"  ("updated_at")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "99990402060445"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:33 +0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 315)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 1600)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:34 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 326)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 1011)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:34 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:35 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:35 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:35 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:35 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:35 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 236)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 14:37:36 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mixail/.asdf/installs/ruby/2.6.2/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/blog_posts" for 127.0.0.1 at 2020-04-20 14:48:51 +0400
+  
+ActionController::RoutingError (No route matches [GET] "/blog_posts"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 14:48:58 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.8ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3359)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mixail/repos/fantastic-funicular/public/packs
+[Webpacker] Hash: d75d13c45c077ff48666
+Version: webpack 4.42.1
+Time: 873ms
+Built at: 2020-04-20 14:49:01
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-17f5312824b8a24c4190.js   70.8 KiB  application  [emitted] [immutable]  application
+js/application-17f5312824b8a24c4190.js.map   80.2 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-17f5312824b8a24c4190.js js/application-17f5312824b8a24c4190.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2 hidden modules
+
+Completed 200 OK in 3120ms (Views: 3114.2ms | ActiveRecord: 2.7ms | Allocations: 81972)
+
+
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 14:49:05 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 3.5ms | Allocations: 1954)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2913)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 3.0ms | Allocations: 10405)
+
+
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 14:49:09 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"authenticity_token"=>"iSrc5TvZRNsWB+t+0DsShCqyGP+v3+ZPTJvr5/zbD5XF+qFK1PRHb50a82TzBNNe0uDxe1Kq2SBlDtPj5hn7Nw==", "user_blog"=>{"title"=>"ewr", "author"=>"ewrewr"}, "commit"=>"Create User blog"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:30:in `block in create'
+  [1m[36mUserBlog Create (1.4ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "ewr"], ["author", "ewrewr"], ["created_at", "2020-04-20 10:49:09.450153"], ["updated_at", "2020-04-20 10:49:09.450153"]]
+  ↳ app/controllers/user_blogs_controller.rb:30:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/user_blogs/1
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms | Allocations: 2924)
+
+
+Started GET "/user_blogs/1" for 127.0.0.1 at 2020-04-20 14:49:09 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:87:in `set_user_blog'
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 6763)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 14:49:11 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (1.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3418)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 2.7ms | Allocations: 8185)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 14:49:13 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.8ms | Allocations: 6921)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 14:49:13 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.7ms | Allocations: 6902)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 14:49:17 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:65:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2378)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 7.9ms | ActiveRecord: 2.7ms | Allocations: 13034)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 14:49:21 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"QD7PpS2zIqZRhYXYtb2VWnOdvgVuUsREeq306GqaXAoM7rIKwp4hEtqYncKWglSAi89XgZMn+ytTOMzscFioqA==", "blog_post"=>{"title"=>"sdjfkh", "content"=>"sdffds"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:70:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+  [1m[36mBlogPost Create (0.8ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "sdjfkh"], ["content", "sdffds"], ["created_at", "2020-04-20 10:49:21.109694"], ["updated_at", "2020-04-20 10:49:21.109694"]]
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 20ms (ActiveRecord: 2.1ms | Allocations: 5817)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 14:49:21 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 1.0ms | Allocations: 6923)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 14:49:24 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:65:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1641)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 6558)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 14:49:27 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"u8toQhroBEaD6iJP4L5HllB+T53BNC4GC5zcEqNo38v3GxXt9cUH8gj3OlXDgYZMqCymGTxBEWkiCeQWuaoraQ==", "blog_post"=>{"title"=>"ewrwer", "content"=>"werqqw"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (1.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:70:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+  [1m[36mUserBlog Load (0.7ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+  [1m[36mBlogPost Create (0.6ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "ewrwer"], ["content", "werqqw"], ["created_at", "2020-04-20 10:49:27.629199"], ["updated_at", "2020-04-20 10:49:27.629199"]]
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:77:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms | Allocations: 4305)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 14:49:27 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.8ms | Allocations: 6916)
+
+
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 14:49:41 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 2.0ms | Allocations: 1156)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6186)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (109.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_dev_db"[0m
+  [1m[35m (108.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_test_db"[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (313.3ms)[0m  [1m[35mCREATE DATABASE "fantastic_dev_db" ENCODING = 'unicode'[0m
+  [1m[35m (225.2ms)[0m  [1m[35mCREATE DATABASE "fantastic_test_db" ENCODING = 'unicode'[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3071460189789384855)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserBlogs (20200402055822)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "user_blogs" (
+  "id" bigserial primary key, 
+  "title" character varying, 
+  "author" character varying, 
+  "created_at" timestamp(6) NOT NULL, 
+  "updated_at" timestamp(6) NOT NULL
+)
+[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402055822"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBlogPostsTable (20200402060445)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "user_blog_id" bigint, "title" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_user_blog_id" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402060445"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndex (99990402060445)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "blog_post_id_index" ON "blog_posts"  ("id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "blog_posts_user_blog_id_index" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_title" ON "blog_posts"  ("title")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_content" ON "blog_posts"  ("content")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_created_at" ON "blog_posts"  ("created_at")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_updated_at" ON "blog_posts"  ("updated_at")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "99990402060445"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-20 10:51:04.776565"], ["updated_at", "2020-04-20 10:51:04.776565"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3071460189789384855)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/mixail/.asdf/installs/ruby/2.6.2/bin/rake:23)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/mixail/repos/fantastic-funicular/config/environment.rb:5)
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:28 +0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 1.6ms | Allocations: 15813)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:29 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 5919)
+
+
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 15:00:30 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 3.0ms | Allocations: 2076)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3035)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 9.5ms | ActiveRecord: 2.3ms | Allocations: 10525)
+
+
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:33 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"authenticity_token"=>"f9AFCCtqW68btBCRY9zIakEuWdErhoMe5qBduKdxTG0zAHinxEdYG5CpCItA4wmwuXywVdbzvHHPNWW8vbO4zw==", "user_blog"=>{"title"=>"цук", "author"=>"цук"}, "commit"=>"Create User blog"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:29:in `create'
+  [1m[36mUserBlog Create (0.8ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "цук"], ["author", "цук"], ["created_at", "2020-04-20 11:00:34.002785"], ["updated_at", "2020-04-20 11:00:34.002785"]]
+  ↳ app/controllers/user_blogs_controller.rb:29:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:29:in `create'
+Redirected to http://localhost:3000/user_blogs/1
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 2947)
+
+
+Started GET "/user_blogs/1" for 127.0.0.1 at 2020-04-20 15:00:34 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:88:in `set_user_blog'
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 6770)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:36 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.7ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3512)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 2.4ms | Allocations: 8290)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 15:00:37 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:66:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2261)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 8.0ms | ActiveRecord: 2.7ms | Allocations: 11754)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 15:00:40 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"rAlXPj0vDrbSouIjXUzRjwj+PPhSyAHBSNJHDAZ6Gu3g2SqR0gINAlm/+jl+cxBV8KzVfK+9Pq5hR38IHLjuTw==", "blog_post"=>{"title"=>"цук", "content"=>"цукуцк"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:71:in `create_post'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mUserBlog Load (0.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mBlogPost Create (0.9ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "цук"], ["content", "цукуцк"], ["created_at", "2020-04-20 11:00:40.816694"], ["updated_at", "2020-04-20 11:00:40.816694"]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms | Allocations: 5242)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:40 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 1.0ms | Allocations: 6925)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 15:00:43 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:66:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1651)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 6571)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 15:00:45 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"oYz+3KHOyvsizC/6xfb13MB7Tr29qTpzH64rI9h2Y2vtXINzTuPJT6nRN+DmyTQGOCmnOUDcBRw2OxMnwrSXyQ==", "blog_post"=>{"title"=>"цук", "content"=>"цук"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:71:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mBlogPost Create (0.5ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "цук"], ["content", "цук"], ["created_at", "2020-04-20 11:00:45.605809"], ["updated_at", "2020-04-20 11:00:45.605809"]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 15ms (ActiveRecord: 1.7ms | Allocations: 4312)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:45 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 1.0ms | Allocations: 6925)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 15:00:47 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:66:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 6561)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 15:00:50 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"oWTEuiIj1iwSPJ8CYDrFnc/QDHz5HPx0C630ty1/G9zttLkVzQ7VmJkhhxhDBQRHN4Ll+ARpwxsiOMyzN73vfg==", "blog_post"=>{"title"=>"123", "content"=>"123"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:71:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mBlogPost Create (1.0ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "123"], ["content", "123"], ["created_at", "2020-04-20 11:00:50.247156"], ["updated_at", "2020-04-20 11:00:50.247156"]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 13ms (ActiveRecord: 4.4ms | Allocations: 4303)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:50 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.6ms | Allocations: 6931)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 15:00:51 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:66:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1641)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 6558)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 15:00:54 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"ghQlc0Loq5+FIB5zYQJcno3OsjZEmtrT70OgZHYNMZ7OxFjcrcWoKw49BmlCPZ1EdZxbsrnv5bzG1phgbM/FPA==", "blog_post"=>{"title"=>"123", "content"=>"123"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:71:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mBlogPost Create (0.3ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "123"], ["content", "123"], ["created_at", "2020-04-20 11:00:54.045332"], ["updated_at", "2020-04-20 11:00:54.045332"]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms | Allocations: 4309)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:54 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (1.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2180)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.8ms | Allocations: 6945)
+
+
+Started GET "/user_blogs/1/new_post" for 127.0.0.1 at 2020-04-20 15:00:55 +0400
+Processing by UserBlogsController#new_post as HTML
+  Parameters: {"blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:66:in `new_post'
+  Rendering user_blogs/new_post.html.erb within layouts/application
+  Rendered user_blogs/new_post.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1645)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6562)
+
+
+Started POST "/user_blogs/1/create_post" for 127.0.0.1 at 2020-04-20 15:00:58 +0400
+Processing by UserBlogsController#create_post as HTML
+  Parameters: {"authenticity_token"=>"K55MH1T3F/ehUXDrcwNQxr+iFieUW6Zl10sE4kcs36RnTjGwu9oUQypMaPFQPJEcR/D/o2kumQr+3jzmXe4rBg==", "blog_post"=>{"title"=>"123", "content"=>"123"}, "commit"=>"Create Blog post", "blog_id"=>"1"}
+  [1m[36mUserBlog Load (0.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:71:in `create_post'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[36mBlogPost Create (0.6ms)[0m  [1m[32mINSERT INTO "blog_posts" ("user_blog_id", "title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_blog_id", 1], ["title", "123"], ["content", "123"], ["created_at", "2020-04-20 11:00:58.224810"], ["updated_at", "2020-04-20 11:00:58.224810"]]
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:78:in `create_post'
+Redirected to http://localhost:3000/user_blogs
+Completed 302 Found in 13ms (ActiveRecord: 2.1ms | Allocations: 4307)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:00:58 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.5ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.8ms | Allocations: 6959)
+
+
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 15:01:02 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 3.5ms | Allocations: 1161)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 6191)
+
+
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 15:01:04 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"authenticity_token"=>"P7w2LUgfHSQiNNAA56JLcdistJpfzPydAyv3uOuxSbpzbEuCpzIekKkpyBrEnYqrIP5dHqK5w/Iqvs+88XO9GA==", "user_blog"=>{"title"=>"цук", "author"=>"цук"}, "commit"=>"Create User blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_blogs_controller.rb:29:in `create'
+  [1m[36mUserBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "цук"], ["author", "цук"], ["created_at", "2020-04-20 11:01:04.601492"], ["updated_at", "2020-04-20 11:01:04.601492"]]
+  ↳ app/controllers/user_blogs_controller.rb:29:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_blogs_controller.rb:29:in `create'
+Redirected to http://localhost:3000/user_blogs/2
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms | Allocations: 2663)
+
+
+Started GET "/user_blogs/2" for 127.0.0.1 at 2020-04-20 15:01:04 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_blogs_controller.rb:88:in `set_user_blog'
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 571)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5866)
+
+
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 15:01:06 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  ↳ app/views/user_blogs/index.html.erb:17
+  [1m[36mBlogPost Load (0.6ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  [1m[36mBlogPost Load (0.4ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 2)[0m
+  ↳ app/views/user_blogs/index.html.erb:23
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.4ms | Allocations: 7961)
+
+

@@ -1,0 +1,35 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+test: &test
+  <<: *default
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  database: fantastic_test_db
+
+development:
+  <<: *test
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  database: fantastic_dev_db
+
+production:
+  <<: *test
+  adapter: postgresql
+  username: fantastic_user
+  password: DDFFJErei4234jfh034
+  host: db.stash.funbox.com
+  port: 5432
+  database: fantastic_dev_db
+

@@ -1,0 +1,1211 @@
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blog_posts"[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_blog_id" integer, "title" varchar, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_blog_posts_on_user_blog_id" ON "blog_posts" ("user_blog_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_blogs"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "user_blogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200402060445)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200402055822);
+
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-04-20 06:27:17.613101"], ["updated_at", "2020-04-20 06:27:17.613101"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ed808bf010d782dfb1a0627dc4bc8fa76f37b7d1"], ["created_at", "2020-04-20 06:27:17.616222"], ["updated_at", "2020-04-20 06:27:17.616222"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:17.652228"], ["updated_at", "2020-04-20 06:27:17.652228"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 10:27:17 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 5209)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+
+Completed 500 Internal Server Error in 1692ms (ActiveRecord: 0.4ms | Allocations: 66989)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:19.355141"], ["updated_at", "2020-04-20 06:27:19.355141"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:27:19 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 860)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+
+Completed 500 Internal Server Error in 1418ms (ActiveRecord: 0.2ms | Allocations: 5763)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 10:27:20 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 5.9ms | Allocations: 2211)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2712)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+
+Completed 500 Internal Server Error in 1438ms (ActiveRecord: 0.0ms | Allocations: 7128)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:22.223861"], ["updated_at", "2020-04-20 06:27:22.223861"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/1/edit" for 127.0.0.1 at 2020-04-20 10:27:22 +0400
+Processing by UserBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_blogs/edit.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 864)
+  Rendered user_blogs/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1213)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+
+Completed 500 Internal Server Error in 1481ms (ActiveRecord: 0.1ms | Allocations: 5718)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:27:23 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:23.722098"], ["updated_at", "2020-04-20 06:27:23.722098"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 778)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:27:23 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:23.732012"], ["updated_at", "2020-04-20 06:27:23.732012"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 679)
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" ORDER BY "user_blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:27:23 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 985)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1187)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+
+Completed 500 Internal Server Error in 1441ms (ActiveRecord: 0.0ms | Allocations: 6093)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:27:25 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.2ms | Allocations: 971)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1173)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+asdf: No version set for command node
+you might want to add one of the following in your .tool-versions file:
+
+nodejs 8.11.3
+nodejs 11.0.0
+nodejs 8.12.0
+nodejs 11.9.0
+
+Completed 500 Internal Server Error in 1431ms (ActiveRecord: 0.0ms | Allocations: 6004)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:26.620369"], ["updated_at", "2020-04-20 06:27:26.620369"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:27:26 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.1ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = ?, "author" = ?, "updated_at" = ? WHERE "user_blogs"."id" = ?[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:27:26.625316"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 837)
+  [1m[36mUserBlog Load (0.0ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:26.629851"], ["updated_at", "2020-04-20 06:27:26.629851"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:27:26 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.1ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = ?, "author" = ?, "updated_at" = ? WHERE "user_blogs"."id" = ?[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:27:26.633633"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 800)
+  [1m[36mUserBlog Load (0.0ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:26.637207"], ["updated_at", "2020-04-20 06:27:26.637207"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started DELETE "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:27:26 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.1ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 531)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.1ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:27:26.644099"], ["updated_at", "2020-04-20 06:27:26.644099"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:27:26 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.1ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 514)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "MyString"], ["author", "MyString"], ["created_at", "2020-04-20 06:27:26.658032"], ["updated_at", "2020-04-20 06:27:26.658032"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/edit.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.1ms | Allocations: 828)
+  Rendered user_blogs/edit.html.erb (Duration: 2.1ms | Allocations: 1577)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:27:26.665603"], ["updated_at", "2020-04-20 06:27:26.665603"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.1ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:27:26.666787"], ["updated_at", "2020-04-20 06:27:26.666787"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/index.html.erb
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 2)[0m
+  Rendered user_blogs/index.html.erb (Duration: 2.3ms | Allocations: 1516)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  Rendering user_blogs/new.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.0ms | Allocations: 799)
+  Rendered user_blogs/new.html.erb (Duration: 1.4ms | Allocations: 1009)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:27:26.677469"], ["updated_at", "2020-04-20 06:27:26.677469"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/show.html.erb
+  Rendered user_blogs/show.html.erb (Duration: 0.7ms | Allocations: 557)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:04.314800"], ["updated_at", "2020-04-20 06:30:04.314800"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 10:30:04 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4250)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mixail/repos/fantastic-funicular/public/packs-test
+[Webpacker] Hash: 426d594b9bbc4cec7db5
+Version: webpack 4.42.1
+Time: 1173ms
+Built at: 2020-04-20 10:30:07
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0a3e8a21d8e8e494b7ad.js   70.8 KiB  application  [emitted] [immutable]  application
+js/application-0a3e8a21d8e8e494b7ad.js.map   80.2 KiB  application  [emitted] [dev]        application
+                             manifest.json  384 bytes               [emitted]              
+Entrypoint application = js/application-0a3e8a21d8e8e494b7ad.js js/application-0a3e8a21d8e8e494b7ad.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 717 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2 hidden modules
+
+Completed 200 OK in 3013ms (Views: 3011.2ms | ActiveRecord: 0.4ms | Allocations: 30150)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.335714"], ["updated_at", "2020-04-20 06:30:07.335714"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 860)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4861)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 2.1ms | Allocations: 1689)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 5972)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.357763"], ["updated_at", "2020-04-20 06:30:07.357763"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/1/edit" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_blogs/edit.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 864)
+  Rendered user_blogs/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 5082)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.373440"], ["updated_at", "2020-04-20 06:30:07.373440"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 770)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.382651"], ["updated_at", "2020-04-20 06:30:07.382651"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 679)
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" ORDER BY "user_blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.2ms | Allocations: 985)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 5435)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 971)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 5355)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.406402"], ["updated_at", "2020-04-20 06:30:07.406402"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.1ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = ?, "author" = ?, "updated_at" = ? WHERE "user_blogs"."id" = ?[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:30:07.410098"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 837)
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.413935"], ["updated_at", "2020-04-20 06:30:07.413935"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.1ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = ?, "author" = ?, "updated_at" = ? WHERE "user_blogs"."id" = ?[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:30:07.417543"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 800)
+  [1m[36mUserBlog Load (0.0ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.421243"], ["updated_at", "2020-04-20 06:30:07.421243"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started DELETE "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.1ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 531)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:30:07.428216"], ["updated_at", "2020-04-20 06:30:07.428216"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/user_blogs/1" for 127.0.0.1 at 2020-04-20 10:30:07 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserBlog Load (0.1ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.1ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 514)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "MyString"], ["author", "MyString"], ["created_at", "2020-04-20 06:30:07.441558"], ["updated_at", "2020-04-20 06:30:07.441558"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/edit.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.1ms | Allocations: 828)
+  Rendered user_blogs/edit.html.erb (Duration: 2.2ms | Allocations: 1577)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:30:07.448126"], ["updated_at", "2020-04-20 06:30:07.448126"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.1ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:30:07.449164"], ["updated_at", "2020-04-20 06:30:07.449164"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/index.html.erb
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  [1m[36mBlogPost Load (0.1ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 2)[0m
+  Rendered user_blogs/index.html.erb (Duration: 2.2ms | Allocations: 1515)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  Rendering user_blogs/new.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.2ms | Allocations: 799)
+  Rendered user_blogs/new.html.erb (Duration: 1.7ms | Allocations: 1009)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:30:07.459847"], ["updated_at", "2020-04-20 06:30:07.459847"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/show.html.erb
+  Rendered user_blogs/show.html.erb (Duration: 0.8ms | Allocations: 557)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(110544584860984785)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserBlogs (20200402055822)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "user_blogs" (
+  "id" bigserial primary key, 
+  "title" character varying, 
+  "author" character varying, 
+  "created_at" timestamp(6) NOT NULL, 
+  "updated_at" timestamp(6) NOT NULL
+)
+[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402055822"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBlogPostsTable (20200402060445)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "user_blog_id" bigint, "title" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_user_blog_id" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200402060445"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-04-20 06:55:35.373640"], ["updated_at", "2020-04-20 06:55:35.373640"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(110544584860984785)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (111.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "fantastic_test_db"[0m
+  [1m[35m (224.1ms)[0m  [1m[35mCREATE DATABASE "fantastic_test_db" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "blog_posts" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "blog_posts" ("id" bigserial primary key, "user_blog_id" bigint, "title" character varying, "content" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_blog_posts_on_user_blog_id" ON "blog_posts"  ("user_blog_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_blogs" CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "user_blogs" ("id" bigserial primary key, "title" character varying, "author" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200402060445)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200402055822);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-04-20 06:55:42.917882"], ["updated_at", "2020-04-20 06:55:42.917882"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "86d10ccc34eb563dd7c67bd03c98bfca840d40a5"], ["created_at", "2020-04-20 06:55:42.921314"], ["updated_at", "2020-04-20 06:55:42.921314"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:42.962736"], ["updated_at", "2020-04-20 06:55:42.962736"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:42 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 1)[0m
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4416)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 1.7ms | Allocations: 54875)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.120462"], ["updated_at", "2020-04-20 06:55:43.120462"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/2" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 860)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 6923)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 2.2ms | Allocations: 1690)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2191)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 7959)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.146328"], ["updated_at", "2020-04-20 06:55:43.146328"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/3/edit" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering user_blogs/edit.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.1ms | Allocations: 864)
+  Rendered user_blogs/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1213)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 7080)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.165843"], ["updated_at", "2020-04-20 06:55:43.165843"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/4
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 763)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.177177"], ["updated_at", "2020-04-20 06:55:43.177177"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/5
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms | Allocations: 667)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" ORDER BY "user_blogs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 985)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1187)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 7412)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.2ms | Allocations: 971)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1173)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 7332)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.207959"], ["updated_at", "2020-04-20 06:55:43.207959"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/6" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"6"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.3ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = $1, "author" = $2, "updated_at" = $3 WHERE "user_blogs"."id" = $4[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:55:43.212529"], ["id", 6]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/6
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 806)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.217704"], ["updated_at", "2020-04-20 06:55:43.217704"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/7" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"7"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.3ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = $1, "author" = $2, "updated_at" = $3 WHERE "user_blogs"."id" = $4[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:55:43.222938"], ["id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/7
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 769)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.227939"], ["updated_at", "2020-04-20 06:55:43.227939"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started DELETE "/user_blogs/8" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms | Allocations: 513)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:43.236546"], ["updated_at", "2020-04-20 06:55:43.236546"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/user_blogs/9" for 127.0.0.1 at 2020-04-20 10:55:43 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 2ms (ActiveRecord: 0.8ms | Allocations: 496)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "MyString"], ["author", "MyString"], ["created_at", "2020-04-20 06:55:43.254094"], ["updated_at", "2020-04-20 06:55:43.254094"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/edit.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.1ms | Allocations: 828)
+  Rendered user_blogs/edit.html.erb (Duration: 2.1ms | Allocations: 1577)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:55:43.261223"], ["updated_at", "2020-04-20 06:55:43.261223"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:55:43.262587"], ["updated_at", "2020-04-20 06:55:43.262587"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/index.html.erb
+  [1m[36mBlogPost Load (0.3ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 11)[0m
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 12)[0m
+  Rendered user_blogs/index.html.erb (Duration: 2.9ms | Allocations: 1515)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  Rendering user_blogs/new.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.6ms | Allocations: 799)
+  Rendered user_blogs/new.html.erb (Duration: 2.1ms | Allocations: 1009)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:55:43.276088"], ["updated_at", "2020-04-20 06:55:43.276088"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/show.html.erb
+  Rendered user_blogs/show.html.erb (Duration: 0.9ms | Allocations: 557)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.536675"], ["updated_at", "2020-04-20 06:55:59.536675"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 14)[0m
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4275)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 208ms (Views: 205.3ms | ActiveRecord: 1.7ms | Allocations: 30826)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.754823"], ["updated_at", "2020-04-20 06:55:59.754823"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/15" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 860)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 4768)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 2.1ms | Allocations: 1689)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 5855)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.776801"], ["updated_at", "2020-04-20 06:55:59.776801"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/16/edit" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering user_blogs/edit.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.1ms | Allocations: 864)
+  Rendered user_blogs/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 4977)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.793302"], ["updated_at", "2020-04-20 06:55:59.793302"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/17
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms | Allocations: 758)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.803904"], ["updated_at", "2020-04-20 06:55:59.803904"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/18
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms | Allocations: 667)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" ORDER BY "user_blogs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 985)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 5318)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.2ms | Allocations: 971)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 5238)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.830847"], ["updated_at", "2020-04-20 06:55:59.830847"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/19" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"19"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.2ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = $1, "author" = $2, "updated_at" = $3 WHERE "user_blogs"."id" = $4[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:55:59.835391"], ["id", 19]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/19
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.840486"], ["updated_at", "2020-04-20 06:55:59.840486"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/20" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"20"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.3ms)[0m  [1m[33mUPDATE "user_blogs" SET "title" = $1, "author" = $2, "updated_at" = $3 WHERE "user_blogs"."id" = $4[0m  [["title", "New T"], ["author", "U2"], ["updated_at", "2020-04-20 06:55:59.845127"], ["id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/20
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 769)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.850241"], ["updated_at", "2020-04-20 06:55:59.850241"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started DELETE "/user_blogs/21" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 2ms (ActiveRecord: 0.8ms | Allocations: 513)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 06:55:59.859374"], ["updated_at", "2020-04-20 06:55:59.859374"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/user_blogs/22" for 127.0.0.1 at 2020-04-20 10:55:59 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.2ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms | Allocations: 496)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "MyString"], ["author", "MyString"], ["created_at", "2020-04-20 06:55:59.877629"], ["updated_at", "2020-04-20 06:55:59.877629"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/edit.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 828)
+  Rendered user_blogs/edit.html.erb (Duration: 2.3ms | Allocations: 1577)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:55:59.885287"], ["updated_at", "2020-04-20 06:55:59.885287"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:55:59.886728"], ["updated_at", "2020-04-20 06:55:59.886728"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/index.html.erb
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 24)[0m
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 25)[0m
+  Rendered user_blogs/index.html.erb (Duration: 3.0ms | Allocations: 1515)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  Rendering user_blogs/new.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.1ms | Allocations: 799)
+  Rendered user_blogs/new.html.erb (Duration: 1.5ms | Allocations: 1009)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 06:55:59.898900"], ["updated_at", "2020-04-20 06:55:59.898900"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/show.html.erb
+  Rendered user_blogs/show.html.erb (Duration: 0.8ms | Allocations: 557)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.551927"], ["updated_at", "2020-04-20 08:01:58.551927"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#index as HTML
+  Rendering user_blogs/index.html.erb within layouts/application
+  [1m[36mUserBlog Load (0.4ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs"[0m
+  [1m[36mBlogPost Load (0.5ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 27)[0m
+  Rendered user_blogs/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4275)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 218ms (Views: 214.4ms | ActiveRecord: 2.2ms | Allocations: 31312)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.781312"], ["updated_at", "2020-04-20 08:01:58.781312"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/28" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering user_blogs/show.html.erb within layouts/application
+  Rendered user_blogs/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 860)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 4758)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/user_blogs/new" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#new as HTML
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 2.3ms | Allocations: 1689)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2190)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5845)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.807447"], ["updated_at", "2020-04-20 08:01:58.807447"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/user_blogs/29/edit" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering user_blogs/edit.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 864)
+  Rendered user_blogs/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 4967)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.824337"], ["updated_at", "2020-04-20 08:01:58.824337"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/30
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 736)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"author"=>"U", "title"=>"T"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.835958"], ["updated_at", "2020-04-20 08:01:58.835958"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/31
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms | Allocations: 645)
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" ORDER BY "user_blogs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 985)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 5287)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/user_blogs" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#create as HTML
+  Parameters: {"user_blog"=>{"title"=>"T2"}}
+  Rendering user_blogs/new.html.erb within layouts/application
+  Rendered user_blogs/_form.html.erb (Duration: 1.3ms | Allocations: 971)
+  Rendered user_blogs/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 5207)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.863217"], ["updated_at", "2020-04-20 08:01:58.863217"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/32" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"32"}
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.3ms)[0m  [1m[33mUPDATE "user_blogs" SET "author" = $1, "title" = $2, "updated_at" = $3 WHERE "user_blogs"."id" = $4[0m  [["author", "U2"], ["title", "New T"], ["updated_at", "2020-04-20 08:01:58.868414"], ["id", 32]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/32
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms | Allocations: 784)
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.874626"], ["updated_at", "2020-04-20 08:01:58.874626"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/user_blogs/33" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#update as HTML
+  Parameters: {"user_blog"=>{"author"=>"U2", "title"=>"New T"}, "id"=>"33"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Update (0.2ms)[0m  [1m[33mUPDATE "user_blogs" SET "author" = $1, "title" = $2, "updated_at" = $3 WHERE "user_blogs"."id" = $4[0m  [["author", "U2"], ["title", "New T"], ["updated_at", "2020-04-20 08:01:58.879123"], ["id", 33]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs/33
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms | Allocations: 747)
+  [1m[36mUserBlog Load (0.3ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.884528"], ["updated_at", "2020-04-20 08:01:58.884528"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+Started DELETE "/user_blogs/34" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms | Allocations: 513)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_blogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "T"], ["author", "U"], ["created_at", "2020-04-20 08:01:58.893231"], ["updated_at", "2020-04-20 08:01:58.893231"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/user_blogs/35" for 127.0.0.1 at 2020-04-20 12:01:58 +0400
+Processing by UserBlogsController#destroy as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUserBlog Load (0.2ms)[0m  [1m[34mSELECT "user_blogs".* FROM "user_blogs" WHERE "user_blogs"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_blogs" WHERE "user_blogs"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user_blogs
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms | Allocations: 496)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "MyString"], ["author", "MyString"], ["created_at", "2020-04-20 08:01:58.914236"], ["updated_at", "2020-04-20 08:01:58.914236"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/edit.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.4ms | Allocations: 828)
+  Rendered user_blogs/edit.html.erb (Duration: 2.5ms | Allocations: 1577)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 08:01:58.922328"], ["updated_at", "2020-04-20 08:01:58.922328"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.2ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 08:01:58.923782"], ["updated_at", "2020-04-20 08:01:58.923782"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/index.html.erb
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 37)[0m
+  [1m[36mBlogPost Load (0.2ms)[0m  [1m[34mSELECT "blog_posts".* FROM "blog_posts" WHERE (user_blog_id = 38)[0m
+  Rendered user_blogs/index.html.erb (Duration: 3.0ms | Allocations: 1515)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  Rendering user_blogs/new.html.erb
+  Rendered user_blogs/_form.html.erb (Duration: 1.2ms | Allocations: 799)
+  Rendered user_blogs/new.html.erb (Duration: 1.6ms | Allocations: 1009)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserBlog Create (0.3ms)[0m  [1m[32mINSERT INTO "user_blogs" ("title", "author", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Title"], ["author", "Author"], ["created_at", "2020-04-20 08:01:58.936755"], ["updated_at", "2020-04-20 08:01:58.936755"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering user_blogs/show.html.erb
+  Rendered user_blogs/show.html.erb (Duration: 0.9ms | Allocations: 557)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
